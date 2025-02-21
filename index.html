@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Freemium Graveyard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Bebas+Neue&family=Creepster&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Gentium Book Plus', serif;
+            background-color: #1A1A1A;
+            color: #E0D8C5;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        h1, h2, p, .navigation {
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .title {
+            font-family: 'Rubik Dirt', cursive;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .tagline {
+            font-family: 'Beau Rivage', cursive;
+            font-size: 1.5em; 
+            margin-bottom: 20px;
+        }
+        .summary {
+            font-size: 0.9em; 
+            margin-bottom: 20px;
+        }
+        .navigation {
+            font-family: 'Bebas Neue', sans-serif;
+            background-color: #60824B;
+            color: #FFFFFF;
+            padding: 10px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+        .navigation a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+
+        .box {
+            background-color: #4E3A4E;
+            color: #E0D8C5;
+            padding: 20px;
+            margin: 0;
+            border-radius: 10px;
+            text-align: center;
+            flex: 1;
+            min-width: 350px;
+            box-sizing: border-box;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .box:hover {
+            transform: scale(1.02);
+        }
+
+        .box-title {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .box-title-creepster {
+            font-family: 'Creepster', cursive;
+            color: #E0D8C5;
+            margin: 0;
+        }
+
+        .box-title-beau-rivage {
+            font-family: 'Beau Rivage', cursive;
+            color: #E0D8C5;
+            margin: 0;
+        }
+
+        .box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .box li {
+            margin-bottom: 10px;
+        }
+        .box img {
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #E0D8C5;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            font-weight: bold;
+        }
+
+        .call-to-action {
+            font-family: 'Bebas Neue', sans-serif;
+            text-align: center;
+            margin-top: 15px;
+        }
+        .call-to-action a {
+            color: #60824B;
+            text-decoration: none;
+        }
+        .box a, .comparison-table a {
+            color: #60824B;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .box {
+                min-width: 90%;
+            }
+        }
+
+        .blog-feed {
+            margin-bottom: 20px;
+        }
+
+        .blog-feed-title {
+            font-family: 'Bebas Neue', sans-serif;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            color: #E0D8C5;
+        }
+
+        .blog-item {
+            background-color: #282828;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .blog-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #E0D8C5;
+        }
+
+        .blog-summary {
+            margin-bottom: 10px;
+            color: #E0D8C5;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .blog-read-time {
+            font-style: italic;
+            color: #E0D8C5;
+        }
+
+        .blog-excerpt {
+            color: #E0D8C5;
+        }
+
+        .blog-link {
+            color: #60824B;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .call-to-action {
+            font-family: 'Bebas Neue', sans-serif;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .call-to-action a {
+            color: #60824B;
+            text-decoration: none;
+        }
+
+        .user-submissions {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .user-submissions .box {
+            background-color: #4E3A4E;
+            color: #E0D8C5;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-sizing: border-box;
+            margin: 10px;
+            min-width: 250px;
+        }
+
+        .user-submissions .box-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .user-submissions .box-title .creepster-title {
+            font-family: 'Creepster';
+            margin-bottom: 5px;
+        }
+
+        .user-submissions .box-title .beau-rivage-tagline {
+            font-family: 'Beau Rivage';
+        }
+
+        .featured-story {
+            text-align: left;
+        }
+
+        .story-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .story-excerpt {
+            margin-bottom: 10px;
+        }
+
+        .story-credit {
+            font-style: italic;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">The Freemium Graveyard</h1>
+        <h2 class="tagline">Where Our Wallets Go To Die</h2>
+        <p class="summary">Welcome to the graveyard of freemium victims! We're not just digging up dirt here; we're performing autopsies on the wallets these predatory services have murdered. From zombie auto-renewals that claw their way back to life to hidden fees that are about as welcome as a headstone in your bathtub, we expose the shady tactics lurking beneath those tempting "free" offers.</p>
+
+        <nav class="navigation">  <a href="reviews.html">Reviews: Detailed Autopsies</a> | 
+            <a href="rants.html">Bone Rattling Rants</a> | 
+            <a href="compare.html">Freemium Battle Royale</a> | 
+            <a href="stories.html">User Horror Stories</a> | 
+            <a href="cemetery.html">Tour of the Cemetery</a>
+        </nav>
+
+        <div class="box-container">
+            <div class="box">
+                <h3 class="box-title box-title-creepster">Digging Up Gems:</h3>
+                <h3 class="box-title box-title-beau-rivage">My Favorite Services</h3>
+                <ul>
+                    <li><a href="#">Service 1</a> - <img src="#" alt="Service 1 Logo" width="20"> Brief description. <a href="#">Learn More</a></li>
+                    <li><a href="#">Service 2</a> - <img src="#" alt="Service 2 Logo" width="20"> Brief description. <a href="#">Learn More</a></li>
+                    <li><a href="#">Service 3</a> - <img src="#" alt="Service 3 Logo" width="20"> Brief description. <a href="#">Learn More</a></li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h3 class="box-title box-title-creepster">The DeadZone:</h3>
+                <h3 class="box-title box-title-beau-rivage">Which Freemium Survives?</h3>
+                <h4 class="call-to-action">Freemium Face-Off: App A vs. App B</h4>
+                <table class="comparison-table">
+                    <tr>
+                        <th>App A <img src="#" alt="App A Logo" width="20"></th>
+                        <th>App B <img src="#" alt="App B Logo" width="20"></th>
+                    </tr>
+                    <tr>
+                        <td>Feature 1: Included (Limited)</td>
+                        <td>Feature 1: Included</td>
+                    </tr>
+                    <tr>
+                        <td>Feature 2: Not Included</td>
+                        <td>Feature 2: Included</td>
+                    </tr>
+                    <tr>
+                        <td>Storage: 5GB</td>
+                        <td>Storage: 10GB</td>
+                    </tr>
+                </table>
+                <p>Verdict: B offers more for "free," but A is simpler.</p>
+                <div class="call-to-action"><a href="#">See the Full Comparison</a></div>
+            </div>
+        </div>
+
+        <div class="blog-feed">
+            <h2 class="blog-feed-title">FRESH IN THE MORGUE</h2>
+            <div class="blog-item">
+                <div class="blog-title">Blog Title 1</div>
+                <div class="blog-summary">Short summary of blog post.</div>
+                <div class="blog-meta">
+                    <div class="blog-read-time">5 min read</div>
+                    <div class="blog-excerpt">Short excerpt of the blog post.</div>
+                </div>
+                <a href="#" class="blog-link">Full Autopsy</a>
+            </div>
+          <div class="call-to-action">
+                <a href="reviews.html">More Autopsies</a>  </div>
+        </div>
+
+        <div class="user-submissions">
+            <div class="box">
+                <h3 class="box-title">
+                    <span class="creepster-title">Ghosts of Freemium Past</span><span class="beau-rivage-tagline">Reader Horror Stories</span>
+                </h3>
+                <div class="featured-story">
+                    <h4 class="story-title">The Auto-Renewal That Wouldn't Die</h4>
+                    <p class="story-excerpt">It started with a "free trial"...</p>
+                    <p class="story-credit">Submitted by: John Doe</p>
+                </div>
+                <div class="call-to-action">
+                    <a href="#">Read The Rest</a> |
+                    <a href="stories.html">Explore Other Horror Stories</a> |
+                    <a href="usersub.html">Tell Us Your Own Nightmare</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
