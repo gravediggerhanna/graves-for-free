@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bone Rattling Rants</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Bebas+Neue&family=Creepster&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Gentium Book Plus', serif;
+            background-color: #1A1A1A;
+            color: #E0D8C5;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            padding: 20px;
+        }
+        h1 {
+            font-family: 'Rubik Dirt', cursive;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .tagline {
+            font-family: 'Beau Rivage', cursive;
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .summary {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+        .rant-feed {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .rant {
+            background-color: #4E3A4E;
+            padding: 15px;
+            border-radius: 10px;
+            flex: 1 0 48%;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .rant:nth-child(2n) {
+            margin-right: 0;
+        }
+        .rant:nth-child(2n+1) {
+            margin-left: 0;
+        }
+        .rant:last-of-type {
+            margin-bottom: 0;
+        }
+        .rant:hover {
+            transform: scale(1.02);
+        }
+        .rant-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: #E0D8C5;
+        }
+        .rant-content {
+            color: #E0D8C5;
+        }
+        .rant-author {
+            font-style: italic;
+            text-align: right;
+            margin-top: 10px;
+            color: #E0D8C5;
+        }
+        .navigation {
+            font-family: 'Bebas Neue', sans-serif;
+            background-color: #60824B;
+            color: #FFFFFF;
+            padding: 10px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .navigation a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .green-rant {
+            background-color: #558B2F;
+        }
+        .rule-box {
+            border: 1px solid #E0D8C5;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .submission-form-container {
+            margin-top: 40px;
+        }
+        .submission-form h2 {
+            font-family: 'Beau Rivage', cursive;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .app-inputs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        .app-inputs label {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .app-inputs input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .submission-form label {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .submission-form input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .submission-form textarea {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            width: 100%;
+            margin-bottom: 10px;
+            height: 150px;
+            resize: vertical;
+        }
+        .submission-form input[type="checkbox"] {
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+        .submission-form label[for="anonymous"] {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .submission-form input[type="submit"] {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        h1, .tagline, .summary, h2, .rant-title, .rant-date, .rant-content, .rant-author, .navigation, .back-link, .rule-box, .submission-form h2, .app-inputs label, .app-inputs input, .submission-form label, .submission-form textarea, .submission-form input[type="submit"] {
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .rant {
+                flex: 1 0 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navigation">
+            <a href="index.html">Home</a> | 
+            <a href="reviews.html">Reviews: Detailed Autopsies</a> | 
+            <a href="compare.html">Freemium Battle Royale</a> | 
+            <a href="stories.html">User Horror Stories</a> | 
+            <a href="cemetery.html">Tour of the Cemetery</a>
+        </nav>
+        <h1>Bone Rattling Rants</h1>
+        <div class="tagline">Unleashing the Fury of Freemium Frustration</div>
+        <div class="summary">
+            <p>Welcome to the Bone Rattling Rants section, where we unleash the collective frustration of freemium users.  Here, you'll find quick, snippy rants about predatory pricing, hidden fees, deceptive "free" trials, and all the other shady tactics employed by freemium services.  Join the chorus of discontent and let your voice be heard!</p>
+        </div>
+
+        <section>
+            <h2>Gravedigger's Woes</h2>
+            <div class="summary">
+                <p>The blog author's personal ranting about the freemium world.</p>
+            </div>
+            <div class="rant-feed">
+                <div class="rant">
+                    <h2 class="rant-title">Rant Title 1</h2>
+                    <p class="rant-date">October 26, 2023</p>
+                    <p class="rant-content">This is the content of rant number one.  It's short, snappy, and full of freemium frustration.</p>
+                </div>
+                <div class="rant">
+                    <h2 class="rant-title">Another Rant</h2>
+                    <p class="rant-date">October 27, 2023</p>
+                    <p class="rant-content">More freemium frustration unleashed! This rant is about... </p>
+                </div>
+                <div class="rant">
+                    <h2 class="rant-title">Third Rant</h2>
+                    <p class="rant-date">October 27, 2023</p>
+                    <p class="rant-content">More freemium frustration unleashed! This rant is about... </p>
+                </div>
+                <div class="rant">
+                    <h2 class="rant-title">fourth Rant</h2>
+                    <p class="rant-date">October 27, 2023</p>
+                    <p class="rant-content">More freemium frustration unleashed! This rant is about... </p>
+                </div>
+                <div class="rant">
+                    <h2 class="rant-title">fifth Rant</h2>
+                    <p class="rant-date">October 27, 2023</p>
+                    <p class="rant-content">More freemium frustration unleashed! This rant is about... </p>
+                </div>
+            </div>
+            <button>Next</button>
+        </section>
+
+        <section>
+            <h2>Wallet Griever's Anguish</h2>
+            <div class="summary">
+                <p>Rants from the community about their freemium woes.</p>
+            </div>
+            <div class="rant-feed">
+                <div class="rant green-rant">
+                    <h2 class="rant-title">Community Rant 1</h2>
+                    <p class="rant-author">Posted by: User1</p>
+                    <p class="rant-content">Community rant text 1.</p>
+                </div>
+                <div class="rant green-rant">
+                    <h2 class="rant-title">Community Rant 2</h2>
+                    <p class="rant-author">Posted by: User2</p>
+                    <p class="rant-content">Community rant text 2.</p>
+                </div>
+                <div class="rant green-rant">
+                    <h2 class="rant-title">Community Rant 3</h2>
+                    <p class="rant-author">Posted by: User3</p>
+                    <p class="rant-content">Community rant text 3.</p>
+                </div>
+                <div class="rant green-rant">
+                    <h2 class="rant-title">Community Rant 4</h2>
+                    <p class="rant-author">Posted by: User4</p>
+                    <p class="rant-content">Community rant text 4.</p>
+                </div>
+                <div class="rant green-rant">
+                    <h2 class="rant-title">Community Rant 5</h2>
+                    <p class="rant-author">Posted by: User5</p>
+                    <p class="rant-content">Community rant text 5.</p>
+                </div>
+            </div>
+            <button class="purple-link">Next</button>
+        </section>
+
+        <footer>
+            <div class="submission-form-container">
+                <div class="submission-form">
+                    <h2>Tombstone Confessional</h2>
+                    <div class="app-inputs">
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" name="title">
+                        <label for="displayName">Display Name:</label>
+                        <input type="text" id="displayName" name="displayName">
+                    </div>
+                    <label for="text">Text (Max 500 words):</label>
+                    <textarea id="text" name="text" maxlength="500"></textarea>
+                    <input type="submit" value="Submit">
+
+                    <div class="rule-box">
+                        <p>All posts are reviewed before being posted. Hateful and bigoted content is not allowed.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
