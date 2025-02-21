@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Horror Story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Bebas+Neue&family=Creepster&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Gentium Book Plus', serif;
+            background-color: #1A1A1A;
+            color: #E0D8C5;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            padding: 20px;
+        }
+        h1 {
+            font-family: 'Rubik Dirt', cursive;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .tagline {
+            font-family: 'Beau Rivage', cursive;
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .summary {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+        form {
+            width: 80%;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #E0D8C5;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #282828; /* Darker background */
+            color: #E0D8C5;
+            border: 1px solid #4E3A4E; /* Subtle border */
+            border-radius: 5px;
+        }
+        textarea {
+            height: 150px;
+        }
+        input[type="submit"] {
+            background-color: #60824B;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: 'Bebas Neue', sans-serif; /* Use a bold font */
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #4E3A4E;
+        }
+        .rules {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #E0D8C5;
+            border-radius: 10px;
+        }
+        .rules h2 {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #E0D8C5;
+        }
+        .rules li {
+            margin-bottom: 5px;
+            color: #E0D8C5;
+        }
+        .navigation {
+            font-family: 'Bebas Neue', sans-serif;
+            background-color: #60824B;
+            color: #FFFFFF;
+            padding: 10px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .navigation a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #60824B;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <a href="index.html">Home</a> | 
+            <a href="reviews.html">Reviews: Detailed Autopsies</a> | 
+            <a href="rants.html">Bone Rattling Rants</a> | 
+            <a href="compare.html">Freemium Battle Royale</a> |  
+            <a href="cemetery.html">Tour of the Cemetery</a>
+        </div>
+        <h1>Submit Your Horror Story</h1>
+        <div class="tagline">Share Your Freemium Nightmare</div>
+        <div class="summary">
+            <p>Have you been victimized by a freemium service?  Share your story here!  Your submission will help others avoid the pitfalls of predatory pricing, hidden fees, and deceptive "free" trials.</p>
+        </div>
+
+        <form action="#" method="post">
+            <label for="display_name">Display Name:</label>
+            <input type="text" id="display_name" name="display_name" required>
+
+            <label for="title">Story Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="story">Your Story:</label>
+            <textarea id="story" name="story" required></textarea>
+
+            <input type="submit" value="Submit Story">
+        </form>
+
+        <div class="rules">
+            <h2>Submission Rules:</h2>
+            <ul>
+                <li>Keep your story concise and to the point.</li>
+                <li>Focus on your personal experience with the freemium service.</li>
+                <li>Be respectful, even when expressing frustration.</li>
+                <li>Submissions may be edited for clarity and length.</li>
+            </ul>
+        </div>
+        <a href="user_submissions.html" class="back-link">&lt; Back to Horror Stories</a>
+    </div>
+</body>
+</html>
