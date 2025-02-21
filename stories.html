@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reader Horror Stories</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Bebas+Neue&family=Creepster&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Gentium Book Plus', serif;
+            background-color: #1A1A1A;
+            color: #E0D8C5;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            padding: 20px;
+        }
+        h1 {
+            font-family: 'Rubik Dirt', cursive;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .tagline {
+            font-family: 'Beau Rivage', cursive;
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .summary {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+        .story-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .story-item {
+            background-color: #4E3A4E;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .story-item:hover {
+            transform: scale(1.02);
+        }
+        .story-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: #E0D8C5;
+        }
+        .story-excerpt {
+            color: #E0D8C5;
+            margin-bottom: 10px; /* Space between excerpt and author */
+        }
+        .story-author {
+            font-style: italic;
+            text-align: right;
+            color: #E0D8C5;
+        }
+        .submission-link {
+            display: block; /* Make it a block element to take up the full width */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .submission-link a {
+            background-color: #60824B;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: 'Bebas Neue', sans-serif;
+            transition: background-color 0.3s ease;
+        }
+        .submission-link a:hover {
+            background-color: #4E3A4E;
+        }
+        .navigation {
+            font-family: 'Bebas Neue', sans-serif;
+            background-color: #60824B;
+            color: #FFFFFF;
+            padding: 10px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .navigation a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #60824B;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <a href="index.html">Home</a> | 
+            <a href="reviews.html">Reviews: Detailed Autopsies</a> | 
+            <a href="rants.html">Bone Rattling Rants</a> | 
+            <a href="compare.html">Freemium Battle Royale</a> |  
+            <a href="cemetery.html">Tour of the Cemetery</a>
+        </div>
+        <h1>Reader Horror Stories</h1>
+        <div class="tagline">Tales from the Freemium Trenches</div>
+        <div class="summary">
+            <p>Welcome to the Reader Horror Stories section, a collection of chilling tales from the front lines of the freemium battlefield.  Here, users share their personal experiences with predatory pricing, hidden fees, deceptive "free" trials, and other freemium nightmares.  Read their stories, share your own, and know that you're not alone in this fight.</p>
+        </div>
+
+        <div class="submission-link">
+            <a href="usersub.html">Submit Your Story</a>
+        </div>
+
+        <div class="story-list">
+            <div class="story-item">
+                <h2 class="story-title">The Auto-Renewal That Wouldn't Die</h2>
+                <p class="story-excerpt">It started with a "free trial"...</p>
+                <p class="story-author">- John Doe</p>
+            </div>
+            <div class="story-item">
+                <h2 class="story-title">The Hidden Fee Horror</h2>
+                <p class="story-excerpt">I thought it was free, until...</p>
+                <p class="story-author">- Jane Smith</p>
+            </div>
+        </div>
+        <a href="index.html" class="back-link">&lt; Back to Home</a>
+    </div>
+</body>
+</html>
