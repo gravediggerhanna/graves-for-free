@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freemium Comparisons</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Bebas+Neue&family=Creepster&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Gentium Book Plus', serif;
+            background-color: #1A1A1A;
+            color: #E0D8C5;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            padding: 20px;
+        }
+        .navigation {
+            font-family: 'Bebas Neue', sans-serif;
+            background-color: #60824B;
+            color: #FFFFFF;
+            padding: 10px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .navigation a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        h1 {
+            font-family: 'Rubik Dirt', cursive;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .tagline {
+            font-family: 'Beau Rivage', cursive;
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .comparison-section {
+            margin-bottom: 40px;
+        }
+        .comparison-boxes {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .comparison-box {
+            background-color: #4E3A4E;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .comparison-box:hover {
+            transform: scale(1.05);
+        }
+        .comparison-box a {
+            color: #E0D8C5;
+            text-decoration: none;
+            font-family: 'Bebas Neue', sans-serif;
+        }
+        .category-section {
+            margin-bottom: 40px;
+        }
+        .category-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .category-item {
+            background-color: #4E3A4E;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+        .category-item:hover {
+            transform: scale(1.05);
+        }
+        .category-link {
+            color: #E0D8C5;
+            text-decoration: none;
+        }
+        .summary {
+            margin-bottom: 40px;
+        }
+        .summary p {
+            text-align: center;
+        }
+        .submission-form-container {
+            margin-top: 40px;
+        }
+        .submission-form {
+        }
+        .submission-form h2 {
+            font-family: 'Beau Rivage', cursive;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .app-inputs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        .app-inputs label {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .app-inputs input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .submission-form label[for="serviceCategory"],
+        .submission-form label[for="displayName"] {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .submission-form input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .submission-form input[type="checkbox"] {
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+        .submission-form label[for="anonymous"] {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .submission-form input[type="submit"] {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-boxes {
+                flex-direction: column;
+            }
+            .app-inputs {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navigation">
+            <a href="index.html">Home</a> | 
+            <a href="reviews.html">Reviews: Detailed Autopsies</a> | 
+            <a href="rants.html">Bone Rattling Rants</a> |  
+            <a href="stories.html">User Horror Stories</a> | 
+            <a href="cemetery.html">Tour of the Cemetery</a>
+        </nav>
+
+        <h1>To The Death: Freemium Battle Royale</h1>
+        <div class="tagline">Whose Grave Am I Digging Tonight?</div>
+
+        <div class="summary">
+            <p>Welcome to the Freemium Battle Royale!  Here lie the dissected remains of countless "free" services.  Browse our collection of comparisons to see which offerings are truly alive and kicking, and which ones are just decaying promises.</p>
+        </div>
+
+        <section class="comparison-section">
+            <h2>Most Popular Comparisons</h2>
+            <div class="comparison-boxes">
+                <div class="comparison-box">
+                    <h3>App A vs App B</h3>
+                    <a href="#">Full Review</a>
+                </div>
+                <div class="comparison-box">
+                    <h3>Service X vs Service Y</h3>
+                    <a href="#">Full Review</a>
+                </div>
+                <div class="comparison-box">
+                    <h3>Platform Z vs Platform W</h3>
+                    <a href="#">Full Review</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <h2>Freemium Service Categories</h2>
+            <div class="category-list">
+                <div class="category-item">
+                    <a href="#" class="category-link">Streaming Services</a>
+                </div>
+                <div class="category-item">
+                    <a href="#" class="category-link">Cloud Storage</a>
+                </div>
+                <div class="category-item">
+                    <a href="#" class="category-link">Productivity Tools</a>
+                </div>
+                <div class="category-item">
+                    <a href="#" class="category-link">Design Software</a>
+                </div>
+        </section>
+
+        <footer>
+            <div class="submission-form-container">
+                <div class="submission-form">
+                    <h2>Want Me to Compare For You?</h2>
+                    <div class="app-inputs">
+                        <label for="app1">App A:</label>
+                        <input type="text" id="app1" name="app1">
+                        <label for="app2">App B:</label>
+                        <input type="text" id="app2" name="app2">
+                    </div>
+                    <label for="serviceCategory">Service Category:</label>
+                    <input type="text" id="serviceCategory" name="serviceCategory">
+                    <label for="displayName">Display Name:</label>
+                    <input type="text" id="displayName" name="displayName">
+                    <input type="checkbox" id="anonymous" name="anonymous">
+                    <label for="anonymous">Anonymous</label><br><br>
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
